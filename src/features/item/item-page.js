@@ -8,11 +8,9 @@ import {
     ItemInfo,
     ItemOrder,
     ItemPhoto,
-    ScrollingContent
+    ScrollingContent,
+    ItemPhotoCarousel
 } from 'shared/components';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 const styles = theme => ({
     item: {
@@ -71,40 +69,14 @@ class ItemPageBase extends React.Component {
         //return src;
     }
 
-    presentImages(classes, morePhotos) {
-        return (
-            <div className={classes.root}>
-                <GridList className={classes.gridList} cols={2.5}>
-                    {morePhotos.map(tile => (
-                        <GridListTile key={tile}>
-                            <img
-                                src={this.fetchFixedImage(tile)}
-                                alt={'image title'}
-                            />
-                            <GridListTileBar
-                                classes={{
-                                    root: classes.titleBar,
-                                    title: classes.title
-                                }}
-                                // actionIcon={
-                                //     <IconButton>
-                                //         <StarBorderIcon className={classes.title} />
-                                //     </IconButton>
-                                // }
-                            />
-                        </GridListTile>
-                    ))}
-                </GridList>
-            </div>
-        );
-    }
-
     presentItem(classes, item, rootStore) {
         if (item.morePhotos) {
-            return this.presentImages(classes, [
-                item.photo,
-                ...item.morePhotos
-            ]);
+            return (
+                <ItemPhotoCarousel
+                    className={classes.root}
+                    rootStore={rootStore}
+                />
+            );
         } else {
             return (
                 <div className={classes.item}>

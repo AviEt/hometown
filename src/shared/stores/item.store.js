@@ -1,4 +1,4 @@
-import { action, observable } from 'mobx';
+import { action, computed, observable } from 'mobx';
 
 /**
  * Item example:
@@ -17,6 +17,7 @@ export class ItemStore {
     @observable isLoading = true;
     @observable items = [];
     @observable selectedItem = null;
+    selectedPhoto = null;
 
     constructor(rootStore) {
         this.rootStore = rootStore;
@@ -44,6 +45,16 @@ export class ItemStore {
     clearSelectedItem() {
         this.selectedItem = null;
         this.isLoading = true;
+    }
+
+    @action
+    getPhotos() {
+        return [this.selectedItem.photo, ...this.selectedItem.morePhotos];
+    }
+
+    @action
+    selectPhoto(photo) {
+        this.selectedPhoto = photo;
     }
 
     selectItem = itemId => {
