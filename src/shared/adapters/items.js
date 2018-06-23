@@ -6,7 +6,13 @@ export const items = [
         name: 'MacBook Pro',
         price: 699,
         photo:
-            'https://firebasestorage.googleapis.com/v0/b/mobx-shop.appspot.com/o/apple-macbook-pro.jpg?alt=media&token=d2b1cf37-cfe0-4f20-adeb-eaeb472cedaa',
+            'https://a0.muscache.com/im/pictures/96bd0eef-d1ed-45d0-9bd6-d93e359ded4c.jpg?aki_policy=x_large',
+        morePhotos: [
+            'https://a0.muscache.com/im/pictures/96bd0eef-d1ed-45d0-9bd6-d93e359ded4c.jpg?aki_policy=x_large',
+            'https://a0.muscache.com/im/pictures/6647c26c-1728-4bf4-a03f-da85180bb297.jpg?aki_policy=x_large',
+            'https://a0.muscache.com/im/pictures/8c3203e9-c919-4e0c-a79b-d494eb461d37.jpg?aki_policy=x_large',
+            'https://a0.muscache.com/im/pictures/82b7ca24-8573-4341-9732-edac67652f0b.jpg?aki_policy=x_large'
+        ],
         isFeatured: true
     },
     {

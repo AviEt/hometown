@@ -32,15 +32,25 @@ class ItemPageBase extends React.Component {
                     {isLoading ? (
                         <BusyIndicator />
                     ) : (
-                        <div className={classes.item}>
-                            <ItemPhoto photo={item.photo} />
-                            <ItemInfo item={item} />
-                            <ItemOrder rootStore={rootStore} item={item} />
-                        </div>
+                        this.presentItem(classes, item, rootStore)
                     )}
                 </ScrollingContent>
             </HeaderLayout>
         );
+    }
+
+    presentItem(classes, item, rootStore) {
+        if (item.morePhotos) {
+            return <div>Hello World</div>;
+        } else {
+            return (
+                <div className={classes.item}>
+                    <ItemPhoto photo={item.photo} />
+                    <ItemInfo item={item} />
+                    <ItemOrder rootStore={rootStore} item={item} />
+                </div>
+            );
+        }
     }
 }
 
