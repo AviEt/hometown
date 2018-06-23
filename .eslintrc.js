@@ -8,15 +8,15 @@ module.exports = {
     globals: {
         expect: true
     },
-    parser: 'babel-eslint',
-    parserOptions: {
-        ecmaVersion: 6,
-        ecmaFeatures: {
-            experimentalObjectRestSpread: true,
-            jsx: true
-        },
-        sourceType: 'module'
-    },
+    // parser: 'babel-eslint',
+    // parserOptions: {
+    //     ecmaVersion: 6,
+    //     ecmaFeatures: {
+    //         experimentalObjectRestSpread: true,
+    //         jsx: true
+    //     },
+    //     sourceType: 'module'
+    // },
     plugins: ['react'],
     extends: ['eslint:recommended', 'plugin:react/recommended'],
     rules: {
