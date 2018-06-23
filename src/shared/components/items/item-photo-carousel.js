@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import { observer } from 'mobx-react/index';
 
 const styles = theme => ({
     root: {
@@ -27,11 +28,16 @@ const styles = theme => ({
     }
 });
 
+@observer
 class ItemPhotoCarouselBase extends React.Component {
     // static propTypes = {
     //     photos: PropTypes.array.isRequired,
     //     selectedPhoto: PropTypes.object
     // };
+
+    selectPhoto = e => {
+        this.props.rootStore.itemStore.selectPhoto(e.target.src);
+    };
 
     render() {
         const {
@@ -49,19 +55,14 @@ class ItemPhotoCarouselBase extends React.Component {
                 <img src={selectedPhoto} alt={'image title'} />
                 <GridList className={classes.gridList} cols={2.5}>
                     {photos.map(tile => (
-                        <GridListTile key={tile}>
+                        <GridListTile key={tile} onClick={this.selectPhoto}>
                             <img src={tile} alt={'image title'} />
+
                             <GridListTileBar
                                 classes={{
                                     root: classes.titleBar,
                                     title: classes.title
                                 }}
-                                onClick={itemStore.selectPhoto(tile)}
-                                // actionIcon={
-                                //     <IconButton>
-                                //         <StarBorderIcon className={classes.title} />
-                                //     </IconButton>
-                                // }
                             />
                         </GridListTile>
                     ))}

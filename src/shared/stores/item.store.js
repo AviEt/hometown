@@ -17,7 +17,7 @@ export class ItemStore {
     @observable isLoading = true;
     @observable items = [];
     @observable selectedItem = null;
-    selectedPhoto = null;
+    @observable selectedPhoto = null;
 
     constructor(rootStore) {
         this.rootStore = rootStore;
