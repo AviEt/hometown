@@ -39,6 +39,8 @@ const styles = theme => ({
         background:
             'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
     }
+
+    //imgFullWidth
 });
 
 @inject('rootStore')
@@ -61,13 +63,24 @@ class ItemPageBase extends React.Component {
         );
     }
 
+    fetchFixedImage(src) {
+        return (
+            'https://res.cloudinary.com/hometown2/image/fetch/w_250,h_285,c_fit,e_sharpen/' +
+            src
+        );
+        //return src;
+    }
+
     presentImages(classes, morePhotos) {
         return (
             <div className={classes.root}>
                 <GridList className={classes.gridList} cols={2.5}>
                     {morePhotos.map(tile => (
                         <GridListTile key={tile}>
-                            <img src={tile} alt={'image title'} />
+                            <img
+                                src={this.fetchFixedImage(tile)}
+                                alt={'image title'}
+                            />
                             <GridListTileBar
                                 classes={{
                                     root: classes.titleBar,
@@ -88,7 +101,10 @@ class ItemPageBase extends React.Component {
 
     presentItem(classes, item, rootStore) {
         if (item.morePhotos) {
-            return this.presentImages(classes, item.morePhotos);
+            return this.presentImages(classes, [
+                item.photo,
+                ...item.morePhotos
+            ]);
         } else {
             return (
                 <div className={classes.item}>
