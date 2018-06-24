@@ -9,6 +9,17 @@ import { HistoryAdapter } from 'mobx-state-router';
 import { RootStore } from 'shared/stores';
 import { history } from 'shared/utils';
 import { Shell } from './shell';
+import { injectGlobal } from 'styled-components';
+import cabin from './assets/fonts/Cabin/Cabin-Bold.ttf';
+
+injectGlobal`
+  @font-face {
+    font-family: 'cabin';
+    src: url(${cabin});
+    font-weight: normal;
+    font-style: normal;
+  }
+`;
 
 // Create the rootStore
 const rootStore = new RootStore();

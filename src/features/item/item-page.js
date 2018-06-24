@@ -24,10 +24,9 @@ const styles = theme => ({
     },
     details: {
         display: 'flex',
-        flex: 2
+        flex: 2,
+        fontFamily: 'cabin'
     }
-
-    //imgFullWidth
 });
 
 @inject('rootStore')
@@ -51,27 +50,17 @@ class ItemPageBase extends React.Component {
     }
 
     presentItem(classes, item, rootStore) {
-        if (Array.isArray(item.photos.slice())) {
-            return (
-                <div className={classes.item}>
-                    <div className={classes.photos}>
-                        <ItemPhotoCarousel
-                            className={classes.photos}
-                            rootStore={rootStore}
-                        />
-                    </div>
-                    <div className={classes.details}>Hello World</div>
+        return (
+            <div className={classes.item}>
+                <div className={classes.photos}>
+                    <ItemPhotoCarousel
+                        className={classes.photos}
+                        rootStore={rootStore}
+                    />
                 </div>
-            );
-        } else {
-            return (
-                <div className={classes.item}>
-                    <ItemPhoto photo={item.photos[0]} />
-                    <ItemInfo item={item} />
-                    <ItemOrder rootStore={rootStore} item={item} />
-                </div>
-            );
-        }
+                <div className={classes.details}>Hello World</div>
+            </div>
+        );
     }
 }
 
