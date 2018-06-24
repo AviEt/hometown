@@ -44,8 +44,8 @@ class HeaderBase extends React.Component {
                     </Typography>
 
                     <SearchInput />
-                    <DepartmentsButton />
-                    <CartButton />
+                    {/*<DepartmentsButton />*/}
+                    {/*<CartButton />*/}
                     <HeaderMenu />
                 </Toolbar>
             </AppBar>
