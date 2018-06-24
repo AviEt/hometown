@@ -18,24 +18,13 @@ const styles = theme => ({
         flexDirection: 'row',
         padding: theme.spacing.unit * 2
     },
-    root: {
+    photos: {
         display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper
+        flex: 1
     },
-    gridList: {
-        flexWrap: 'nowrap',
-        // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-        transform: 'translateZ(0)'
-    },
-    title: {
-        color: theme.palette.primary.light
-    },
-    titleBar: {
-        background:
-            'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
+    details: {
+        display: 'flex',
+        flex: 2
     }
 
     //imgFullWidth
@@ -61,21 +50,18 @@ class ItemPageBase extends React.Component {
         );
     }
 
-    fetchFixedImage(src) {
-        return (
-            'https://res.cloudinary.com/hometown2/image/fetch/w_250,h_285,c_fit,e_sharpen/' +
-            src
-        );
-        //return src;
-    }
-
     presentItem(classes, item, rootStore) {
         if (Array.isArray(item.photos.slice())) {
             return (
-                <ItemPhotoCarousel
-                    className={classes.root}
-                    rootStore={rootStore}
-                />
+                <div className={classes.item}>
+                    <div className={classes.photos}>
+                        <ItemPhotoCarousel
+                            className={classes.photos}
+                            rootStore={rootStore}
+                        />
+                    </div>
+                    <div className={classes.details}>Hello World</div>
+                </div>
             );
         } else {
             return (

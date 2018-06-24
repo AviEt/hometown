@@ -16,8 +16,10 @@ const styles = theme => ({
     },
     gridList: {
         flexWrap: 'nowrap',
+        maxWidth: '600px',
+        minWidth: '600px'
         // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-        transform: 'translateZ(0)'
+        //transform: 'translateZ(0)'
     },
     title: {
         color: theme.palette.primary.light
@@ -25,6 +27,12 @@ const styles = theme => ({
     titleBar: {
         background:
             'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
+    },
+    mainPhoto: {
+        maxWidth: '400px',
+        minWidth: '400px',
+        maxHeight: '300px',
+        minHeight: '300px'
     }
 });
 
@@ -48,7 +56,11 @@ class ItemPhotoCarouselBase extends React.Component {
         const photos = itemStore.getPhotos();
         return (
             <div>
-                <img src={selectedPhoto} alt={'image title'} />
+                <img
+                    src={selectedPhoto}
+                    alt={'image title'}
+                    className={classes.mainPhoto}
+                />
                 <GridList className={classes.gridList} cols={5.5}>
                     {photos.map(tile => (
                         <GridListTile key={tile} onClick={this.selectPhoto}>
