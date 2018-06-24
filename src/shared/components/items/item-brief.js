@@ -11,8 +11,8 @@ const styles = theme => ({
     },
     briefDetails: {
         display: 'flex',
-        flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingRight: theme.spacing.unit * 2
     }
 });
 
