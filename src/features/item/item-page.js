@@ -25,7 +25,10 @@ const styles = theme => ({
     details: {
         display: 'flex',
         flex: 2,
-        fontFamily: 'cabin'
+        fontFamily: 'cabin',
+        color: '#484848',
+        fontSize: '32px',
+        paddingLeft: '50px'
     }
 });
 

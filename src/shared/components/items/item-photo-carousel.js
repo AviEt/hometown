@@ -29,8 +29,8 @@ const styles = theme => ({
             'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
     },
     mainPhoto: {
-        maxWidth: '400px',
-        minWidth: '400px',
+        maxWidth: '550px',
+        minWidth: '550px',
         maxHeight: '300px',
         minHeight: '300px'
     }
