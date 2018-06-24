@@ -24,7 +24,7 @@ class HeaderBase extends React.Component {
 
     static defaultProps = {
         NavButton: HomeButton,
-        title: 'MobX Shop'
+        title: 'Hometown'
     };
 
     render() {

@@ -16,7 +16,7 @@ const styles = theme => ({
     item: {
         display: 'flex',
         flexDirection: 'row',
-        padding: theme.spacing.unit * 2
+        padding: theme.spacing.unit * 3
     },
     photos: {
         display: 'flex',
