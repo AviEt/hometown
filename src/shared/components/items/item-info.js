@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { CurrencyUtils } from 'shared/utils';
+import { ItemBrief } from 'shared/components';
 
 const styles = theme => ({
     root: {
@@ -17,17 +17,26 @@ const styles = theme => ({
     },
     price: {
         marginTop: theme.spacing.unit * 2
+    },
+    header: {
+        display: 'flex',
+        fontFamily: 'cabin',
+        color: '#484848',
+        fontSize: '32px'
+    },
+    city: {
+        fontFamily: 'cabin',
+        color: '#484848',
+        fontSize: '16px'
     }
 });
 
 function ItemInfoBase({ classes, item }) {
     return (
         <div className={classes.root}>
-            <div className={classes.name}>{item.name}</div>
-            <div>by {item.manufacturer}</div>
-            <div className={classes.price}>
-                {CurrencyUtils.toString(item.price, 'USD')}
-            </div>
+            <div className={classes.header}>{item.name}</div>
+            <div className={classes.city}>{item.city}</div>
+            <ItemBrief item={item} />
         </div>
     );
 }

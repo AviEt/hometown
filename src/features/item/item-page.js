@@ -25,9 +25,6 @@ const styles = theme => ({
     details: {
         display: 'flex',
         flex: 2,
-        fontFamily: 'cabin',
-        color: '#484848',
-        fontSize: '32px',
         paddingLeft: '50px'
     }
 });
@@ -61,7 +58,9 @@ class ItemPageBase extends React.Component {
                         rootStore={rootStore}
                     />
                 </div>
-                <div className={classes.details}>Hello World</div>
+                <div className={classes.details}>
+                    <ItemInfo item={item} />
+                </div>
             </div>
         );
     }

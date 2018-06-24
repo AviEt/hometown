@@ -17,8 +17,10 @@ export const items = [
         id: 'E02',
         department: 'electronics',
         manufacturer: 'Apple',
-        name: 'iMac',
+        city: 'London',
+        name: 'Bringing NY to Oxford',
         price: 1299,
+        roommates: 3,
         photos: [
             'https://a0.muscache.com/im/pictures/b0998d00-e88f-46c0-ae39-2097900641b0.jpg?aki_policy=xx_large',
             'https://a0.muscache.com/im/pictures/55a0bbec-5e96-4b82-85b5-d927f4d3b6ea.jpg?aki_policy=x_large',
