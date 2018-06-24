@@ -70,7 +70,7 @@ class ItemPageBase extends React.Component {
     }
 
     presentItem(classes, item, rootStore) {
-        if (item.morePhotos) {
+        if (Array.isArray(item.photos.slice())) {
             return (
                 <ItemPhotoCarousel
                     className={classes.root}
@@ -80,7 +80,7 @@ class ItemPageBase extends React.Component {
         } else {
             return (
                 <div className={classes.item}>
-                    <ItemPhoto photo={item.photo} />
+                    <ItemPhoto photo={item.photos[0]} />
                     <ItemInfo item={item} />
                     <ItemOrder rootStore={rootStore} item={item} />
                 </div>

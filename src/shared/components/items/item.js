@@ -31,7 +31,7 @@ class ItemBase extends React.Component {
                 className={classes.root}
                 onClick={this.handleClick}
             >
-                <ItemPhoto photo={item.photo} />
+                <ItemPhoto photo={item.photos[0]} />
                 <ItemInfo item={item} />
             </div>
         );

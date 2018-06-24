@@ -44,16 +44,12 @@ class ItemPhotoCarouselBase extends React.Component {
             classes,
             rootStore: { itemStore }
         } = this.props;
-        const { selectedItem } = itemStore;
-        const photos = selectedItem.morePhotos;
-        const selectedPhoto = itemStore.selectedPhoto
-            ? itemStore.selectedPhoto
-            : selectedItem.photo;
-
+        const { selectedPhoto } = itemStore;
+        const photos = itemStore.getPhotos();
         return (
             <div>
                 <img src={selectedPhoto} alt={'image title'} />
-                <GridList className={classes.gridList} cols={2.5}>
+                <GridList className={classes.gridList} cols={5.5}>
                     {photos.map(tile => (
                         <GridListTile key={tile} onClick={this.selectPhoto}>
                             <img src={tile} alt={'image title'} />

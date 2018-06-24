@@ -38,18 +38,20 @@ export class ItemStore {
     @action
     setSelectedItem(item) {
         this.selectedItem = item;
+        this.selectedPhoto = this.selectedItem.photos[0];
         this.isLoading = false;
     }
 
     @action
     clearSelectedItem() {
         this.selectedItem = null;
+        this.selectedPhoto = null;
         this.isLoading = true;
     }
 
     @action
     getPhotos() {
-        return [this.selectedItem.photo, ...this.selectedItem.morePhotos];
+        return this.selectedItem.photos;
     }
 
     @action
