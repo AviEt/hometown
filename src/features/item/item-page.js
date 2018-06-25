@@ -10,7 +10,8 @@ import {
     ItemPhoto,
     ScrollingContent,
     ItemPhotoCarousel,
-    ItemHighlight
+    ItemHighlight,
+    ProfileCard
 } from 'shared/components';
 
 const styles = theme => ({
@@ -69,6 +70,7 @@ class ItemPageBase extends React.Component {
                         item={item}
                         className={classes.detailsItem}
                     />
+                    <ProfileCard profile={item.roommatesProfile[0]} />
                 </div>
             </div>
         );
