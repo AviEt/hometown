@@ -18,7 +18,7 @@ export class HomePage extends React.Component {
             <HeaderLayout>
                 <ScrollingContent>
                     <Typography variant="title" style={styles.title}>
-                        Featured Items
+                        Available Apartments
                     </Typography>
                     <ItemList rootStore={rootStore} />
                 </ScrollingContent>

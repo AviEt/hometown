@@ -63,11 +63,6 @@ class HeaderMenuBase extends React.Component {
                     {user ? (
                         <MenuItem onClick={this.onSignOut}>Sign Out</MenuItem>
                     ) : null}
-
-                    <MenuItem onClick={this.onToggleTheme}>
-                        <span className={classes.themeLabel}>Toggle Theme</span>
-                        <LightbulbOutline className={classes.themeIcon} />
-                    </MenuItem>
                 </Menu>
             </div>
         );
