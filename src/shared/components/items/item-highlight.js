@@ -6,10 +6,6 @@ const styles = theme => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        borderColor: 'rgb(219, 219, 219)',
-        borderRadius: '4px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
         padding: theme.spacing.unit * 3,
         marginTop: theme.spacing.unit
     },

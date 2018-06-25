@@ -70,7 +70,7 @@ function renderPets(classes, item) {
 function ItemBriefBase({ classes, item }) {
     return (
         <div className={classes.root}>
-            {renderRoomates(classes, item.roommates)}
+            {renderRoomates(classes, item.maxRoommates)}
             {renderSmoking(classes, item)}
             {renderPets(classes, item)}
         </div>

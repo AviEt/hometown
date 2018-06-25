@@ -20,9 +20,9 @@ export const items = [
         city: 'London',
         name: 'Bringing NY to Oxford',
         price: 1299,
-        roommates: 3,
         smoking: true,
         pets: true,
+        maxRoommates: 3,
         photos: [
             'https://a0.muscache.com/im/pictures/b0998d00-e88f-46c0-ae39-2097900641b0.jpg?aki_policy=xx_large',
             'https://a0.muscache.com/im/pictures/55a0bbec-5e96-4b82-85b5-d927f4d3b6ea.jpg?aki_policy=x_large',
@@ -44,7 +44,7 @@ export const items = [
                 description: 'Rent is 20% cheaper than similar apartments'
             }
         ],
-        roommatesProfile: [
+        roommates: [
             {
                 name: 'Avi Etzioni',
                 avatar:
@@ -55,6 +55,15 @@ export const items = [
                 description:
                     "Avi loves a clean house, especially when he's not the one cleaning. Same goes for good" +
                     ' food. '
+            },
+            {
+                name: 'John Snow',
+                avatar:
+                    'https://scontent.ftlv2-1.fna.fbcdn.net/v/t1.0-9/13502101_805876096179114_1207648309781300672_n.jpg?_nc_cat=0&_nc_eui2=AeHSubLJ3byBx6QgJzPQEbTFHQ2wfnpWflQPFdE7ZnMK-ETa0F106uulhfk4OhHFPrrgogbUpQU0bL4v-JbKaXM-pGdiS-8aymr3uFajMJvhsw&oh=022b51914ee400a7b198dd5064f354e6&oe=5BE8BD07',
+                cover:
+                    'https://scontent.ftlv2-1.fna.fbcdn.net/v/t1.0-9/13221693_784084301691627_6320836576418719352_n.jpg?_nc_cat=0&_nc_eui2=AeEM6yZ93LI-aCxn9cyO52nYASfBEifBzsdtNg6agI7K7TmfFtiJL3K20BhAfDwB8FFR6JIpSus1q0fZnO6_JhKRWwwxkg43DzuF3bYz57rJFQ&oh=91473e5319fcbdde54bf0068fd611bc3&oe=5BE5F838',
+                joined: 'December 11 2016',
+                description: 'Knows nothing'
             }
         ],
         isFeatured: true

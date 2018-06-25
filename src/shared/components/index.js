@@ -18,3 +18,4 @@ export { ItemPhotoCarousel } from './items/item-photo-carousel';
 export { ItemBrief } from './items/item-brief';
 export { ItemHighlight } from './items/item-highlight';
 export { ProfileCard } from './people/profile-card';
+export { ItemRoommates } from './items/item-roomates';
