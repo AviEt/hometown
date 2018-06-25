@@ -7,7 +7,6 @@ const styles = theme => ({
     root: {
         padding: theme.spacing.unit,
         marginLeft: theme.spacing.unit * 4,
-        flex: 1,
         display: 'flex',
         flexDirection: 'column'
     },

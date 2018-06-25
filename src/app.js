@@ -10,12 +10,19 @@ import { RootStore } from 'shared/stores';
 import { history } from 'shared/utils';
 import { Shell } from './shell';
 import { injectGlobal } from 'styled-components';
+import cabinLight from './assets/fonts/Cabin/Cabin-Regular.ttf';
 import cabin from './assets/fonts/Cabin/Cabin-Bold.ttf';
 
 injectGlobal`
   @font-face {
     font-family: 'cabin';
     src: url(${cabin});
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'cabin-light';
+    src: url(${cabinLight});
     font-weight: normal;
     font-style: normal;
   }

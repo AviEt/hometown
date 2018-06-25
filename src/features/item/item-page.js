@@ -9,7 +9,8 @@ import {
     ItemOrder,
     ItemPhoto,
     ScrollingContent,
-    ItemPhotoCarousel
+    ItemPhotoCarousel,
+    ItemHighlight
 } from 'shared/components';
 
 const styles = theme => ({
@@ -25,7 +26,11 @@ const styles = theme => ({
     details: {
         display: 'flex',
         flex: 2,
-        paddingLeft: '50px'
+        paddingLeft: '50px',
+        flexDirection: 'column'
+    },
+    detailsItem: {
+        flex: 1
     }
 });
 
@@ -59,7 +64,11 @@ class ItemPageBase extends React.Component {
                     />
                 </div>
                 <div className={classes.details}>
-                    <ItemInfo item={item} />
+                    <ItemInfo item={item} className={classes.detailsItem} />
+                    <ItemHighlight
+                        item={item}
+                        className={classes.detailsItem}
+                    />
                 </div>
             </div>
         );

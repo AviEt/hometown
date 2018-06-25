@@ -33,6 +33,17 @@ export const items = [
             'https://a0.muscache.com/im/pictures/0417e27c-339e-48b2-9339-96e1b42cb29a.jpg?aki_policy=x_large',
             'https://a0.muscache.com/im/pictures/26fe7b98-dd09-4344-9146-9acb593a4249.jpg?aki_policy=x_large'
         ],
+        highlights: [
+            {
+                name: 'Neighborhood',
+                description:
+                    'The neighborhood is very quite and within a walking distance from a lot of tech companies'
+            },
+            {
+                name: 'Price',
+                description: 'Rent is 20% cheaper than similar apartments'
+            }
+        ],
         isFeatured: true
     },
     {

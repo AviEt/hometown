@@ -16,3 +16,4 @@ export { ItemOrder } from './items/item-order';
 export { ItemPhoto } from './items/item-photo';
 export { ItemPhotoCarousel } from './items/item-photo-carousel';
 export { ItemBrief } from './items/item-brief';
+export { ItemHighlight } from './items/item-highlight';
